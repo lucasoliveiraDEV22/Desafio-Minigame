@@ -1,11 +1,12 @@
-import Home from './pages/Home';
+
 import GlobalStyles from './styles/GlobalStyles';
+import Game from './components/Game';
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Home />
+      <Game />
     </>
   );
 }

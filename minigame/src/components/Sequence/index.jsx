@@ -4,9 +4,13 @@ import * as C from './styles'
 
 const Sequence = ({ sequence, currentIndex }) => {
   return (
-    <C.Sequence className='sequence'>
+    <C.Sequence>
       {sequence.map((char, index) => (
-        <span key={index} className={index === currentIndex ? 'active' : ''}>
+        <span key={index} 
+        style={{
+          color: index === currentIndex ? '#fff' : '#2F3349',
+          backgroundColor: index === currentIndex ? '#eeca2b' : '#F0F0F0'
+          }}>
           {char}
         </span>
       ))}

@@ -1,8 +1,6 @@
 import { styled } from 'styled-components';
 
 export const Timer = styled.div`
-  .timer {
-    font-size: 1.5em;
-    margin: 10px;
-  }
+    color: #F0F0F0;
+    font-size: 1.2rem;
 `;

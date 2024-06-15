@@ -3,8 +3,8 @@ import * as C from './styles'
 
 const Timer = ({ timeLeft }) => {
   return (
-    <C.Timer className="timer">
-      Tempo Restante: {timeLeft}s
+    <C.Timer>
+      Tempo Restante: <span>{timeLeft}</span>s
     </C.Timer>
   );
 };

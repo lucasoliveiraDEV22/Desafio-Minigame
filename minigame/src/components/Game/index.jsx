@@ -4,6 +4,8 @@ import Result from '../Result';
 import Sequence from '../Sequence';
 import Timer from '../Timer';
 import * as C from './styles';
+// import keyPress from '../../assets/sound/key-press.mp3'
+// import wrongAnswer from '../../assets/sound/wrong-answer.mp3'
 
 const generateSequence = (length) => {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -16,9 +18,12 @@ const generateSequence = (length) => {
 const Game = () => {
   const [sequence, setSequence] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(20);
   const [gameOver, setGameOver] = useState(false);
   const [result, setResult] = useState('');
+
+  // const keyPressSound = useMemo(() => new Audio(keyPress), []);
+  // const errorSound = useMemo(() => new Audio(wrongAnswer), []);
 
   useEffect(() => {
     setSequence(generateSequence(5));
@@ -67,11 +72,13 @@ const Game = () => {
   };
 
   return (
-    <C.Game className='App'>
+    <C.Bg>
+    <C.Game>
       <Sequence sequence={sequence} currentIndex={currentIndex} />
       <Timer timeLeft={timeLeft} />
       {gameOver && <Result result={result} onRestart={handleRestart} />}
     </C.Game>
+    </C.Bg>
 
   );
 };

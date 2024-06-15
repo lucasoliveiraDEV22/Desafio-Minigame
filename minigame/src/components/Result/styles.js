@@ -4,18 +4,23 @@ export const Result = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .result {
-    margin: 20px;
-  }
+  gap: 1rem;
 
-  .result p {
-    font-size: 1.5em;
-    margin: 10px 0;
+  p {
+    font-size: 1.2rem;
   }
-
-  .result button {
-    padding: 10px 20px;
-    font-size: 1em;
+ button {
+    padding: 8px 12px;
+    font-size: 1rem;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #eeca2b;
+    color: #2F3349;
+    font-weight: bold;
+  }
+
+  button:hover{
+    opacity: 0.5;
   }
 `;
